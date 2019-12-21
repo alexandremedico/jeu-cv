@@ -1,0 +1,573 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.fond{
+  width: 7500px;
+  height: 500px;
+  background-image: url('../image/fond.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+}
+
+.jeu{
+    width: 620px;
+    height: 500px;
+    position: absolute;
+    top: 250px;
+    left: 100px;
+    overflow: hidden;
+}
+
+.cv{
+    width: 50%;
+    position: absolute;
+    left: 49%;
+    border: 2px solid black;
+    top: 5%;
+}
+
+#container, #contenu, #contenu2{
+    position: absolute;
+  }
+  .masque{
+    top: 412px;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    left: 200px;
+  }
+  .sprite{
+    left: -81px;
+    top: -34px;
+    border: 2px solid blue;
+  }
+  .sprite2{
+    left: -81px;
+    top: -34px;
+    border: 2px solid blue;
+  }
+
+/* goomba */
+.containerGoomba {
+    position: absolute;
+    top: 412px;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+}
+
+.containerGoomba2{
+    position: absolute;
+    top: 412px;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+}
+
+#goomba, #goomba2 {
+  position: absolute;
+  left: 0px;
+  top: -16px;
+}
+
+
+ 
+@keyframes descente {
+    0% {
+       top: 244px;
+    }
+    100% {
+      top: 412px;
+    }
+ }
+
+ .saut{
+  animation-name: descente; 
+  animation-duration: 2s;
+}
+ 
+/* .sautUp { 
+    top: 242px;
+    transition: 1s;
+ } */
+
+/* .sautDown{
+  top: 412px;
+  transition: 1s;
+}  */
+
+ @keyframes saut2 {
+  0% {
+     transform: translateY(0px);
+  }
+  50% {
+     transform: translateY(-92px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.saut2 {
+  animation-name: saut2;
+  animation-duration: 1.5s;
+}
+
+.block{
+  display: block;
+}
+
+.none{
+  display: none;
+}
+
+/* animation tomber dans un trou */
+.tomber{
+  top: 484px;
+}
+
+@keyframes mort {
+  0% {
+     top: 484px;
+  }
+  50% {
+    top: 400px;
+  }
+  100% {
+    top: 550px;
+  }
+}
+
+.mort {
+  animation-name: mort;
+  animation-duration: 2s;
+}
+
+/* animation toucher un goomba */
+.tomberGoomba{
+  top: 412px;
+}
+
+@keyframes mortGoomba {
+  0% {
+     top: 412px;
+  }
+  50% {
+    top: 360px;
+  }
+  100% {
+    top: 550px;
+  }
+}
+
+.mortGoomba {
+  animation-name: mortGoomba;
+  animation-duration: 2s;
+}
+
+
+.image-cv{
+    position: relative;
+    left: 45%;
+}
+
+.texte {
+  position: relative;
+  top : 30px;
+  left : 30px;
+  width: 45%;
+}
+
+/* bouton */
+#accueil {
+  color: #f26522;
+  padding: 1em;
+  display: inline-block;
+  border: 3px solid transparent;
+  position: relative;
+  font-size: 1.5em;
+  cursor: pointer;
+  letter-spacing: 0.07em;
+  text-decoration: none;
+  top: 600px;
+  width: 10%;
+  text-align: center;
+}
+
+#cv {
+  color: #f26522;
+  padding: 1em;
+  display: inline-block;
+  border: 3px solid transparent;
+  position: relative;
+  font-size: 1.5em;
+  cursor: pointer;
+  letter-spacing: 0.07em;
+  text-decoration: none;
+  top: 590px;
+  width: 10%;
+  text-align: center;
+  left: 280px;
+}
+
+
+a .text {
+  font-family: proxima-nova, monospace;
+  transform: translate3d(0,0.7em,0);
+  display: block;
+  transition: transform 0.4s cubic-bezier(.2,0,0,1) 0.4s;
+  font-size:40px;
+}
+
+a:after {
+  position: absolute;
+  content: '';
+  bottom: -3px;
+  left: calc(0.7em * 1.2);
+  right: calc(0.7em * 1.2);
+  height: 3px;
+  /* background: #f26522; */
+  background: blue;
+  transform-origin: left;
+  transition: 
+  transform 0.8s cubic-bezier(1,0,.37,1) 0.2s,
+  right 0.2s cubic-bezier(.04,.48,0,1) 0.6s,
+  left 0.4s cubic-bezier(.04,.48,0,1) 0.6s,
+}  
+
+.line {
+  position: absolute;
+  /* background: #f26522; */
+}
+
+.-right, .-left {
+  width: 3px;
+  bottom: -3px;
+  top: -3px;
+  transform: scale3d(1,0,1);
+  background: red;
+}  
+
+.-top, .-bottom {
+  height: 3px;
+  left: -3px;
+  right: -3px;
+  transform: scale3d(0,1,1);
+  background: blue;
+}
+
+.-right {
+  right: -3px;
+  transition: transform 0.1s cubic-bezier(1,0,.65,1.01) 0.23s;
+  transform-origin: top;
+}
+
+.-top {
+  top: -3px;
+  transition: transform 0.08s linear 0.43s;
+  transform-origin: left;
+}
+
+.-left {
+  left: -3px;
+  transition: transform 0.08s linear 0.51s;
+  transform-origin: bottom;
+}
+
+.-bottom {
+  bottom: -3px;
+  transition: transform 0.3s cubic-bezier(1,0,.65,1.01);
+  transform-origin: right;
+}    
+
+a:hover .text, a:active .text{
+  transform: translate3d(0,0,0);
+  transition: transform 0.6s cubic-bezier(.2,0,0,1) 0.4s;
+}
+
+a:hover:after, a:active:after{
+  transform: scale3d(0,1,1);
+  right: -3px;
+  left: -3px;
+  transform-origin: right;
+  transition: 
+  transform 0.2s cubic-bezier(1,0,.65,1.01) 0.17s,
+  right 0.2s cubic-bezier(1,0,.65,1.01),
+  left 0s 0.3s;
+}
+
+a:hover .line, a:active .line {
+  transform: scale3d(1,1,1);
+}
+
+a:hover .-right, a:active .-right {
+  transition: transform 0.1s cubic-bezier(1,0,.65,1.01) 0.2s;
+  transform-origin: bottom;
+}
+
+a:hover .-top, a:active .-top {
+  transition: transform 0.08s linear 0.4s;
+  transform-origin: right;
+}
+
+a:hover .-left, a:active .-left {
+  transition: transform 0.08s linear 0.48s;
+  transform-origin: top;
+}
+
+a:hover .-bottom, a:active .-bottom {
+  transition: transform 0.5s cubic-bezier(0,.53,.29,1) 0.56s;
+  transform-origin: left;
+}
+
+
+/* logo case-html */
+#image1 {
+  position: absolute;
+  display: none;
+  width: 32px;
+  height: 32px;
+}
+
+@keyframes html-case {
+  0% {
+     top: 0px;
+  }
+  100% {
+    top: -35px;
+  }
+}
+
+.html-case {
+  animation-name: html-case;
+  animation-duration: 1.5s;
+}
+
+.masqueImage1 {
+    position: absolute;
+    left: 573px;
+    top: 287px;
+    width: 32px;
+    height: 32px;
+}
+
+/* logo case-css */
+#image2 {
+  position: absolute;
+  display: none;
+  width: 32px;
+  height: 32px;
+}
+
+@keyframes css-case {
+  0% {
+     top: 0px;
+  }
+  100% {
+    top: -35px;
+  }
+}
+
+.css-case {
+  animation-name: css-case;
+  animation-duration: 1.5s;
+}
+
+.masqueImage2 {
+    position: absolute;
+    left: 2787px;
+    top: 287px;
+    width: 32px;
+    height: 32px;
+}
+
+/* logo case-js */
+#image3 {
+  position: absolute;
+  display: none;
+  width: 32px;
+  height: 32px;
+}
+
+@keyframes js-case {
+  0% {
+     top: 0px;
+  }
+  100% {
+    top: -35px;
+  }
+}
+
+.js-case {
+  animation-name: js-case;
+  animation-duration: 1.5s;
+}
+
+.masqueImage3 {
+    position: absolute;
+    left: 3787px;
+    top: 287px;
+    width: 32px;
+    height: 32px;
+}
+
+/* logo case-node-js */
+#image4 {
+  position: absolute;
+  display: none;
+  width: 32px;
+  height: 32px;
+}
+
+@keyframes node-js-case {
+  0% {
+     top: 0px;
+  }
+  100% {
+    top: -35px;
+  }
+}
+
+.node-js-case {
+  animation-name: node-js-case;
+  animation-duration: 1.5s;
+}
+
+.masqueImage4 {
+    position: absolute;
+    left: 6073px;
+    top: 287px;
+    width: 32px;
+    height: 32px;
+}
+
+
+/* piece1 */
+#piece1, #containerImage1{
+  position: absolute;
+}
+
+.piece1 {
+  position: absolute;
+  display: none;
+  width: 32px;
+  height: 32px;
+  left: 752px;
+  top: 253px;
+}
+
+.masquePiece1 {
+  left: 752px;
+  top: 254px;
+  width: 32px;
+  height: 32px;
+}
+
+/* piece 2 */
+#piece2, #containerImage2{
+  position: absolute;
+}
+
+.piece2 {
+  position: absolute;
+  display: none;
+  width: 32px;
+  height: 32px;
+  left: 824px;
+  top: 253px;
+}
+
+.masquePiece2 {
+  left: 824px;
+  top: 254px;
+  width: 32px;
+  height: 32px;
+}
+
+/* piece 3 */
+#piece3, #containerImage3{
+  position: absolute;
+}
+
+.piece3 {
+  position: absolute;
+  display: none;
+  width: 32px;
+  height: 32px;
+  left: 3895px;
+  top: 253px;
+}
+
+.masquePiece3 {
+  left: 824px;
+  top: 254px;
+  width: 32px;
+  height: 32px;
+}
+
+/* piece 4 */
+#piece4, #containerImage4{
+  position: absolute;
+}
+
+.piece4 {
+  position: absolute;
+  display: none;
+  width: 32px;
+  height: 32px;
+  left: 4002px;
+  top: 253px;
+}
+
+.masquePiece4 {
+  left: 824px;
+  top: 254px;
+  width: 32px;
+  height: 32px;
+}
+
+/* score */
+.score {
+  width: 80px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  text-align: center;
+  background-color: white;
+  color: black;
+}
+
+
+div p img {
+  width: 4%;
+}
+
+#mario1, #mario2{
+  width: 5%;
+}
+
+.fleche {
+  width: 4%;
+}
+
+.fleche1 {
+  width: 7%;
+}
+
+.footer1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.bouton {
+  color: red;
+}
