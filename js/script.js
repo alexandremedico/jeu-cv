@@ -459,10 +459,12 @@ window.onload = function(){
     var deuxFois = true;
     var troisFois = true;
     var quatreFois = true;
+    var inc = true;
     var inc1 = true;
     var inc2 = true;
     var inc3 = true;
     var inc4 = true;
+    var limiteSaut = '230px';
     
     // animation case
     var interval1 = setInterval(function(){ 
@@ -630,6 +632,10 @@ window.onload = function(){
       masque.style.width = decompositionDuSprite.perso[i].largeurMasque;
       masque.style.height = decompositionDuSprite.perso[i].hauteurMasque;
       sprite.style.top = decompositionDuSprite.perso[i].topDeImage;
+
+      if (parseFloat(top) === 412) {
+        limiteSaut = '230px';
+      }
       
       switch(code){
         case 37:
@@ -945,12 +951,12 @@ window.onload = function(){
           }
           
           // saut
-          if (parseFloat(window.document.body.children[0].children[0].children[0].style.top) > 230 && sauter == true && window.document.body.children[0].children[0].children[0].children[0].style.display == 'block') {
+          if (parseFloat(window.document.body.children[0].children[0].children[0].style.top) > parseFloat(limiteSaut) && sauter == true && window.document.body.children[0].children[0].children[0].children[0].style.display == 'block') {
             console.log('saut Droite');
             var top = parseFloat(top) - 7;
             window.document.body.children[0].children[0].children[0].style.top = top + 'px';
             // sauter = true;
-          } else if (parseFloat(window.document.body.children[0].children[0].children[0].style.top) > 230 && sauter == true && window.document.body.children[0].children[0].children[0].children[1].style.display == 'block') {
+          } else if (parseFloat(window.document.body.children[0].children[0].children[0].style.top) > parseFloat(limiteSaut) && sauter == true && window.document.body.children[0].children[0].children[0].children[1].style.display == 'block') {
             console.log('saut Gauche');
             var top = parseFloat(top) - 7;
             window.document.body.children[0].children[0].children[0].style.top = top + 'px';
@@ -988,28 +994,17 @@ window.onload = function(){
             } else {
               sauter = false;
             }
-            if ((parseFloat(left) >= 556) && (parseFloat(left) <= 603) && parseFloat(top) == 321 && uneFois == true) {
-              uneFois = false;
+            if ((parseFloat(left) >= 560) && (parseFloat(left) <= 600) && parseFloat(top) == 321) {
               clearInterval(interval1);
-              score += 1000;
-              point.innerHTML = score;
               masque2.style.width = vide.case[0].largeurMasque;
               masque2.style.height = vide.case[0].hauteurMasque;
               sprite3.style.top = vide.case[0].topDeImage;
               sprite3.style.left = vide.case[0].leftDeImage; 
               window.document.body.children[0].children[0].children[2].children[0].style.display = "block";
-              window.document.body.children[0].children[0].children[2].children[0].className = "html-case";
-              window.document.body.children[0].children[0].children[2].children[0].style.top = "-35px";
               setTimeout(function() {
                 window.document.body.children[0].children[0].children[2].children[0].style.display = "none";
-                document.body.children[1].children[0].children[0].style.display ="none";
-                document.body.children[1].children[0].children[1].style.display ="block";
-                document.body.children[1].children[0].children[2].style.display ="block";
-                document.body.children[1].children[0].children[2].children[0].style.display ="block";
-                document.body.children[1].children[0].children[2].children[0].children[0].style.display ="block";
-              }, 1500);
+              },1000);
             }
-            // sauter = true;
           }
 
           if ((( parseFloat(left) >= 699) && (parseFloat(left) <= 890) && parseFloat(top) > 310)){
@@ -1021,6 +1016,7 @@ window.onload = function(){
             } else {
               sauter = false;
             }
+
             if (( parseFloat(left) >= 740) && (parseFloat(left) <= 780) && parseFloat(top) == 321) {
               clearInterval(interval2);
               masque3.style.width = vide.case[0].largeurMasque;
@@ -1032,6 +1028,7 @@ window.onload = function(){
                 window.document.body.children[0].children[0].children[4].children[0].style.display = "none";
               },1000)
             }
+
             if (( parseFloat(left) >= 810) && (parseFloat(left) <= 850) && parseFloat(top) == 321) {
               clearInterval(interval3);
               masque4.style.width = vide.case[0].largeurMasque;
@@ -1043,6 +1040,37 @@ window.onload = function(){
                 window.document.body.children[0].children[0].children[6].children[0].style.display = "none";
               },1000)
             }
+          }
+
+          if (( parseFloat(left) >= 780) && (parseFloat(left) <= 810 && parseFloat(top) <= 270)) {
+            limiteSaut = '179px';
+            if (parseFloat(window.document.body.children[0].children[0].children[0].style.top) >= 179 && sauter == true) {
+              console.log('saut sous bloc haut');
+              var top = parseFloat(top) - 7;
+              window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+            }
+
+            if (( parseFloat(left) >= 780) && (parseFloat(left) <= 810) && parseFloat(top) == 172 && uneFois == true) {
+            uneFois = false;
+            clearInterval(interval4);
+            score += 1000;
+            point.innerHTML = score;
+            masque5.style.width = vide.case[0].largeurMasque;
+            masque5.style.height = vide.case[0].hauteurMasque;
+            sprite6.style.top = vide.case[0].topDeImage;
+            sprite6.style.left = vide.case[0].leftDeImage; 
+            window.document.body.children[0].children[0].children[8].children[0].style.display = "block";
+            window.document.body.children[0].children[0].children[8].children[0].className = "html-case";
+            window.document.body.children[0].children[0].children[8].children[0].style.top = "-35px";
+            setTimeout(function() {
+                  window.document.body.children[0].children[0].children[8].children[0].style.display = "none";
+                  document.body.children[1].children[0].children[0].style.display ="none";
+                  document.body.children[1].children[0].children[1].style.display ="block";
+                  document.body.children[1].children[0].children[2].style.display ="block";
+                  document.body.children[1].children[0].children[2].children[0].style.display ="block";
+                  document.body.children[1].children[0].children[2].children[0].children[0].style.display ="block";
+                }, 1500);
+              }
           }
 
           if ((parseFloat(left) >= 2740) && (parseFloat(left) <= 2855) && parseFloat(top) > 300){
@@ -1064,11 +1092,11 @@ window.onload = function(){
               masque6.style.height = vide.case[0].hauteurMasque;
               sprite7.style.top = vide.case[0].topDeImage;
               sprite7.style.left = vide.case[0].leftDeImage; 
-              window.document.body.children[0].children[0].children[9].children[0].style.display = "block";
-              window.document.body.children[0].children[0].children[9].children[0].className = "css-case";
-              window.document.body.children[0].children[0].children[9].children[0].style.top = "-35px";
+              window.document.body.children[0].children[0].children[10].children[0].style.display = "block";
+              window.document.body.children[0].children[0].children[10].children[0].className = "css-case";
+              window.document.body.children[0].children[0].children[10].children[0].style.top = "-35px";
               setTimeout(function() {
-                window.document.body.children[0].children[0].children[9].children[0].style.display = "none";
+                window.document.body.children[0].children[0].children[10].children[0].style.display = "none";
                 document.body.children[1].children[1].children[0].style.display ="none";
                 document.body.children[1].children[1].children[1].style.display ="block";
                 document.body.children[1].children[1].children[2].style.display ="block";
@@ -1767,51 +1795,52 @@ window.onload = function(){
         // window.document.body.children[0].children[0].children[0].className = "masque";
         sprite.style.left = decompositionDuSprite.perso[0].leftDeImage;
         sprite2.style.left = decompositionDuSprite.perso[0].leftDeImage;
+        
 
         // descente du saut entre les cases et tuyaux
-        if (parseFloat(top) >= 230 && parseFloat(left) < 550) {
+        if (parseFloat(top) >= 90 && parseFloat(left) < 550) {
           console.log('descente 1');
           var top = 412;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
         }
 
-        if (parseFloat(top) >= 230 && parseFloat(left) > 600 && parseFloat(left) < 699) {
+        if (parseFloat(top) >= 90 && parseFloat(left) >= 600 && parseFloat(left) < 699) {
           console.log('descente 2');
           var top = 412;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
         }
 
-        if (parseFloat(top) >= 230 && parseFloat(left) > 890 && parseFloat(left) <= 980) {
+        if (parseFloat(top) >= 90 && parseFloat(left) > 890 && parseFloat(left) <= 980) {
           console.log('descente 3');
           var top = 412;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
         }
 
-        if (parseFloat(top) >= 230 && parseFloat(left) > 1069 && parseFloat(left) <= 1340) {
+        if (parseFloat(top) >= 90 && parseFloat(left) > 1069 && parseFloat(left) <= 1340) {
           console.log('descente 4');
           var top = 412;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
         }
 
-        if (parseFloat(top) >= 230 && parseFloat(left) > 1429 && parseFloat(left) <= 1620) {
+        if (parseFloat(top) >= 90 && parseFloat(left) > 1429 && parseFloat(left) <= 1620) {
           console.log('descente 5');
           var top = 412;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
         }
 
-        if (parseFloat(top) >= 230 && parseFloat(left) > 1719 && parseFloat(left) <= 2020) {
+        if (parseFloat(top) >= 90 && parseFloat(left) > 1719 && parseFloat(left) <= 2020) {
           console.log('descente 6');
           var top = 412;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
         }
 
-        if (parseFloat(top) >= 230 && parseFloat(left) > 2109 && parseFloat(left) <= 2460) {
+        if (parseFloat(top) >= 90 && parseFloat(left) > 2109 && parseFloat(left) <= 2460) {
           console.log('descente avant trou 1');
           var top = 412;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
         }
 
-        if (parseFloat(top) >= 230 && parseFloat(left) >= 2465 && parseFloat(left) <= 2525) {
+        if (parseFloat(top) >= 90 && parseFloat(left) >= 2465 && parseFloat(left) <= 2525) {
           console.log('descente trou 1');
           var top = 484;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
@@ -1823,19 +1852,19 @@ window.onload = function(){
           , 1500);
         }
 
-        if (parseFloat(top) >= 230 && parseFloat(left) > 2525 && parseFloat(left) <= 2730) {
+        if (parseFloat(top) >= 90 && parseFloat(left) > 2525 && parseFloat(left) <= 2730) {
           console.log('descente apres trou 1');
           var top = 412;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
         }
 
-        if (parseFloat(top) >= 230 && parseFloat(left) > 2859 && parseFloat(left) <= 3060) {
+        if (parseFloat(top) >= 90 && parseFloat(left) > 2859 && parseFloat(left) <= 3060) {
           console.log('descente avant trou 2');
           var top = 412;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
         }
 
-        if (parseFloat(top) >= 230 && parseFloat(left) >= 3070 && parseFloat(left) < 3170) {
+        if (parseFloat(top) >= 90 && parseFloat(left) >= 3070 && parseFloat(left) < 3170) {
           console.log('descente trou 1');
           var top = 484;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
@@ -1847,67 +1876,67 @@ window.onload = function(){
           , 1500);
         }
 
-        if (parseFloat(top) >= 230 && parseFloat(left) >= 3170 && parseFloat(left) <= 3340) {
+        if (parseFloat(top) >= 90 && parseFloat(left) >= 3170 && parseFloat(left) <= 3340) {
           console.log('descente apres trou 2');
           var top = 412;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
         }
 
-        if (parseFloat(top) >= 230 && parseFloat(left) >= 3390 && parseFloat(left) <= 3550) {
+        if (parseFloat(top) >= 90 && parseFloat(left) >= 3390 && parseFloat(left) <= 3550) {
           console.log('descente 7');
           var top = 412;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
         }
 
-        if (parseFloat(top) >= 230 && parseFloat(left) >= 3610 && parseFloat(left) <= 3770) {
+        if (parseFloat(top) >= 90 && parseFloat(left) >= 3610 && parseFloat(left) <= 3770) {
           console.log('descente 8');
           var top = 412;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
         }
 
-        if (parseFloat(top) >= 230 && parseFloat(left) >= 3820 && parseFloat(left) <= 3870) {
+        if (parseFloat(top) >= 90 && parseFloat(left) >= 3820 && parseFloat(left) <= 3870) {
           console.log('descente 9');
           var top = 412;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
         }
         
-        if (parseFloat(top) >= 230 && parseFloat(left) >= 3930 && parseFloat(left) <= 3980) {
+        if (parseFloat(top) >= 90 && parseFloat(left) >= 3930 && parseFloat(left) <= 3980) {
           console.log('descente 10');
           var top = 412;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
         }
 
-        if (parseFloat(top) >= 230 && parseFloat(left) >= 4040 && parseFloat(left) <= 4190) {
+        if (parseFloat(top) >= 90 && parseFloat(left) >= 4040 && parseFloat(left) <= 4190) {
           console.log('descente 11');
           var top = 412;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
         }
 
-        if (parseFloat(top) >= 230 && parseFloat(left) >= 4250 && parseFloat(left) <= 4590) {
+        if (parseFloat(top) >= 90 && parseFloat(left) >= 4250 && parseFloat(left) <= 4590) {
           console.log('descente 12');
           var top = 412;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
         }
 
-        if (parseFloat(top) >= 230 && parseFloat(left) >= 4680 && parseFloat(left) <= 4770) {
+        if (parseFloat(top) >= 90 && parseFloat(left) >= 4680 && parseFloat(left) <= 4770) {
           console.log('descente avant gros bloc 1');
           var top = 412;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
         }
 
-        if (parseFloat(top) >= 225 && parseFloat(left) >= 4930 && parseFloat(left) <= 4980) {
+        if (parseFloat(top) >= 90 && parseFloat(left) >= 4930 && parseFloat(left) <= 4980) {
           console.log('descente entre gros bloc 1 et gros bloc 2');
           var top = 412;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
         }
 
-        if (parseFloat(top) >= 230 && parseFloat(left) >= 5140 && parseFloat(left) <= 5270) {
+        if (parseFloat(top) >= 90 && parseFloat(left) >= 5140 && parseFloat(left) <= 5270) {
           console.log('descente apres gros bloc 2');
           var top = 412;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
         }
 
-        if (parseFloat(top) >= 225 && parseFloat(left) >= 5465 && parseFloat(left) < 5520) {
+        if (parseFloat(top) >= 90 && parseFloat(left) >= 5465 && parseFloat(left) < 5520) {
           console.log('descente trou 3');
           var top = 484;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
@@ -1919,19 +1948,19 @@ window.onload = function(){
           , 1500);
         }
 
-        if (parseFloat(top) >= 230 && parseFloat(left) >= 5680 && parseFloat(left) <= 5800) {
+        if (parseFloat(top) >= 90 && parseFloat(left) >= 5680 && parseFloat(left) <= 5800) {
           console.log('descente apres gros bloc 4');
           var top = 412;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
         }
 
-        if (parseFloat(top) >= 230 && parseFloat(left) >= 5900 && parseFloat(left) <= 5980) {
+        if (parseFloat(top) >= 90 && parseFloat(left) >= 5900 && parseFloat(left) <= 5980) {
           console.log('descente 13');
           var top = 412;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
         }
 
-        if (parseFloat(top) >= 230 && parseFloat(left) >= 6150 && parseFloat(left) <= 6370) {
+        if (parseFloat(top) >= 90 && parseFloat(left) >= 6150 && parseFloat(left) <= 6370) {
           console.log('descente 14');
           var top = 412;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
@@ -1994,66 +2023,6 @@ window.onload = function(){
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
         }
 
-        // if (parseFloat(top) < 230 && !parseFloat(left) >= 2730 && !parseFloat(left) < 2855) {
-        //   var top = 412;
-        //   window.document.body.children[0].children[0].children[0].style.top = top + 'px';
-        // }
-
-        // if (parseFloat(top) < 230 && !parseFloat(left) >= 3340 && !parseFloat(left) < 3390) {
-        //   var top = 412;
-        //   window.document.body.children[0].children[0].children[0].style.top = top + 'px';
-        // }
-
-        // if (parseFloat(top) < 230 && !parseFloat(left) >= 3555 && !parseFloat(left) < 3605) {
-        //   var top = 412;
-        //   window.document.body.children[0].children[0].children[0].style.top = top + 'px';
-        // }
-
-        // if (parseFloat(top) < 230 && !parseFloat(left) >= 3770 && !parseFloat(left) < 3819) {
-        //   var top = 412;
-        //   window.document.body.children[0].children[0].children[0].style.top = top + 'px';
-        // }
-
-        // if (parseFloat(top) < 230 && !parseFloat(left) >= 3877 && !parseFloat(left) < 3927) {
-        //   var top = 412;
-        //   window.document.body.children[0].children[0].children[0].style.top = top + 'px';
-        // }
-
-        // if (parseFloat(top) < 230 && !parseFloat(left) >= 3980 && !parseFloat(left) < 4034) {
-        //   var top = 412;
-        //   window.document.body.children[0].children[0].children[0].style.top = top + 'px';
-        // }
-
-        // if (parseFloat(top) < 230 && !parseFloat(left) >= 4199 && !parseFloat(left) < 4248 ) {
-        //   var top = 412;
-        //   window.document.body.children[0].children[0].children[0].style.top = top + 'px';
-        // }
-
-        // if (parseFloat(top) < 230 && !parseFloat(left) >= 4589 && !parseFloat(left) < 4676) {
-        //   var top = 412;
-        //   window.document.body.children[0].children[0].children[0].style.top = top + 'px';
-        // }
-
-        // if (parseFloat(top) < 230 && !parseFloat(left) >= 5980 && !parseFloat(left) < 6141) {
-        //   var top = 412;
-        //   window.document.body.children[0].children[0].children[0].style.top = top + 'px';
-        // }
-
-        // if (parseFloat(top) >= 230) {
-        //   var top = 412;
-        //   window.document.body.children[0].children[0].children[0].style.top = top + 'px';
-        // }
-
-        // if (parseFloat(top) >= 321) {
-        //   var top = 412;
-        //   window.document.body.children[0].children[0].children[0].style.top = top + 'px';
-        // }
-
-        // if (parseFloat(top) > 240 && parseFloat(top) < 320 && descente == true) {
-        //   var top = 412;
-        //   window.document.body.children[0].children[0].children[0].style.top = top + 'px';
-        // }
-
 
         // saut sur les blocs
         if (parseFloat(left) >= 550 && parseFloat(left) < 600 && parseFloat(top) < 300) {
@@ -2062,66 +2031,82 @@ window.onload = function(){
           console.log(sautBloc);
           var top = 270;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '100px';
         }
 
         if (parseFloat(left) >= 699 && parseFloat(left) < 890  && parseFloat(top) < 300) {
           console.log("saut sur bloc2");
           var top = 270;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '100px';
+        } else if (parseFloat(left) >= 780 && parseFloat(left) <= 810 && parseFloat(top) <= 100) {
+          console.log("saut sur bloc haut 1");
+          var top = 100;
+          window.document.body.children[0].children[0].children[0].style.top = top + 'px';
         }
+      
 
         if (parseFloat(left) >= 2730 && parseFloat(left) < 2855  && parseFloat(top) < 300) {
           console.log("saut sur bloc3");
           var top = 270;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '100px';
         }
 
         if (parseFloat(left) >= 3340 && parseFloat(left) < 3390  && parseFloat(top) < 300) {
           console.log("saut sur bloc4");
           var top = 270;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '100px';
         }
 
         if (parseFloat(left) >= 3555 && parseFloat(left) < 3605  && parseFloat(top) < 300) {
           console.log("saut sur bloc5");
           var top = 270;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '100px';
         }
 
         if (parseFloat(left) >= 3770 && parseFloat(left) < 3819  && parseFloat(top) < 300) {
           console.log("saut sur bloc6");
           var top = 270;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '100px';
         }
 
         if (parseFloat(left) >= 3877 && parseFloat(left) < 3927  && parseFloat(top) < 300) {
           console.log("saut sur bloc7");
           var top = 270;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '100px';
         }
 
         if (parseFloat(left) >= 3980 && parseFloat(left) < 4034  && parseFloat(top) < 300) {
           console.log("saut sur bloc8");
           var top = 270;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '100px';
         }
 
         if (parseFloat(left) >= 4199 && parseFloat(left) < 4248  && parseFloat(top) < 300) {
           console.log("saut sur bloc9");
           var top = 270;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '100px';
         }
 
         if (parseFloat(left) >= 4589 && parseFloat(left) < 4676  && parseFloat(top) < 300) {
           console.log("saut sur bloc10");
           var top = 270;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '100px';
         }
 
         if (parseFloat(left) >= 5980 && parseFloat(left) < 6141  && parseFloat(top) < 300) {
           console.log("saut sur bloc11");
           var top = 270;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '100px';
         }
 
 
@@ -2130,36 +2115,42 @@ window.onload = function(){
           console.log("saut sur le tuyau 1");
           var top = 341;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '170px';
         }
 
         if (parseFloat(left) >= 1340 && parseFloat(left) < 1425 && parseFloat(top) < 305) {
           console.log("saut sur le tuyau 2");
           var top = 305;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '130px';
         }
 
         if (parseFloat(left) >= 1620 && parseFloat(left) < 1710 && parseFloat(top) < 265) {
           console.log("saut sur le tuyau 3");
           var top = 269;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '100px';
         }
 
         if (parseFloat(left) >= 2019 && parseFloat(left) < 2105 && parseFloat(top) < 265) {
           console.log("saut sur le tuyau 4");
           var top = 269;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '100px';
         }
 
         if (parseFloat(left) >= 5800 && parseFloat(left) < 5890 && parseFloat(top) < 340) {
           console.log("saut sur le tuyau 5");
           var top = 341;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '170px';
         }
 
         if (parseFloat(left) >= 6370 && parseFloat(left) < 6460 && parseFloat(top) < 340) {
           console.log("saut sur le tuyau 6");
           var top = 341;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '170px';
         }
         
 
@@ -2170,22 +2161,27 @@ window.onload = function(){
           console.log('bonjour')
         }
 
-        if (parseFloat(left) >= 740 && parseFloat(left) <= 780 && inc1 == true) {
+        if (parseFloat(left) >= 560 && parseFloat(left) <= 600 && parseFloat(top) >= 300 && inc == true) {
+          inc = false;
+          increment();
+        }
+
+        if (parseFloat(left) >= 740 && parseFloat(left) <= 780 && parseFloat(top) >= 300 && inc1 == true) {
           inc1 = false;
           increment();
         }
 
-        if (parseFloat(left) >= 810 && parseFloat(left) <= 850 && inc2 == true) {
+        if (parseFloat(left) >= 810 && parseFloat(left) <= 850 && parseFloat(top) >= 300 && inc2 == true) {
           inc2 = false;
           increment();
         }
 
-        if (parseFloat(left) >= 3877 && parseFloat(left) <= 3925 && inc3 == true) {
+        if (parseFloat(left) >= 3877 && parseFloat(left) <= 3925 && parseFloat(top) >= 300 && inc3 == true) {
           inc3 = false;
           increment();
         }
 
-        if (parseFloat(left) >= 3986 && parseFloat(left) <= 4033 && inc4 == true) {
+        if (parseFloat(left) >= 3986 && parseFloat(left) <= 4033 && parseFloat(top) >= 300 && inc4 == true) {
           inc4 = false;
           increment();
         }
@@ -2196,24 +2192,28 @@ window.onload = function(){
           console.log("saut sur le gros bloc 1");
           var top = 377;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '200px';
         }
 
         if ((parseFloat(left) > 4805 && parseFloat(left) <= 4840 && parseFloat(top) < 342)) {
           console.log("saut sur le gros bloc 2");
           var top = 341;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '170px';
         }
 
-        if ((parseFloat(left) > 4850 && parseFloat(left) <= 4870 && parseFloat(top) < 306)) {
+        if ((parseFloat(left) >= 4850 && parseFloat(left) <= 4870 && parseFloat(top) < 306)) {
           console.log("saut sur le gros bloc 3");
           var top = 305;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '130px';
         }
 
         if ((parseFloat(left) > 4880 && parseFloat(left) <= 4920 && parseFloat(top) < 270)) {
           console.log("saut sur le gros bloc 4");
           var top = 269;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '100px';
         }
 
 
@@ -2222,24 +2222,28 @@ window.onload = function(){
           console.log("saut sur le gros bloc 5");
           var top = 269;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '100px';
         }
 
         if ((parseFloat(left) >= 5040 && parseFloat(left) < 5070 && parseFloat(top) < 304)) {
           console.log("saut sur le gros bloc 6");
           var top = 305;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '130px';
         }
 
         if ((parseFloat(left) >= 5070 && parseFloat(left) <= 5100 && parseFloat(top) < 340)) {
           console.log("saut sur le gros bloc 7");
           var top = 341;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '170px';
         }
 
         if ((parseFloat(left) >= 5110 && parseFloat(left) <= 5140 && parseFloat(top) < 376)) {
           console.log("saut sur le gros bloc 8");
           var top = 377;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '200px';
         }
 
 
@@ -2248,24 +2252,28 @@ window.onload = function(){
           console.log("saut sur le gros bloc 9");
           var top = 377;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '200px';
         }
 
         if ((parseFloat(left) >= 5310 && parseFloat(left) <= 5340 && parseFloat(top) < 342)) {
           console.log("saut sur le gros bloc 10");
           var top = 341;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '170px';
         }
 
         if ((parseFloat(left) >= 5350 && parseFloat(left) <= 5370 && parseFloat(top) < 306)) {
           console.log("saut sur le gros bloc 11");
           var top = 305;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '130px';
         }
 
         if ((parseFloat(left) >= 5380 && parseFloat(left) <= 5460 && parseFloat(top) < 270)) {
           console.log("saut sur le gros bloc 12");
           var top = 269;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '100px';
         }
 
 
@@ -2274,24 +2282,28 @@ window.onload = function(){
           console.log("saut sur le gros bloc 13");
           var top = 269;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '100px';
         }
 
         if ((parseFloat(left) >= 5570 && parseFloat(left) <= 5600 && parseFloat(top) < 304)) {
           console.log("saut sur le gros bloc 14");
           var top = 305;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '130px';
         }
 
         if ((parseFloat(left) >= 5610 && parseFloat(left) <= 5630 && parseFloat(top) < 340)) {
           console.log("saut sur le gros bloc 15");
           var top = 341;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '170px';
         }
 
         if ((parseFloat(left) >= 5640 && parseFloat(left) <= 5670 && parseFloat(top) < 376)) {
           console.log("saut sur le gros bloc 16");
           var top = 377;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '200px';
         }
 
 

@@ -354,8 +354,8 @@ a:hover .-bottom, a:active .-bottom {
 
 .masqueImage1 {
     position: absolute;
-    left: 573px;
-    top: 287px;
+    left: 788px;
+    top: 144px;
     width: 32px;
     height: 32px;
 }
@@ -450,6 +450,27 @@ a:hover .-bottom, a:active .-bottom {
     height: 32px;
 }
 
+
+/* piece */
+#piece, #containerImage{
+  position: absolute;
+}
+
+.piece {
+  position: absolute;
+  display: none;
+  width: 32px;
+  height: 32px;
+  left: 574px;
+  top: 253px;
+}
+
+.masquePiece {
+  left: 752px;
+  top: 254px;
+  width: 32px;
+  height: 32px;
+}
 
 /* piece1 */
 #piece1, #containerImage1{
