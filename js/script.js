@@ -1188,14 +1188,14 @@ window.onload = function(){
             window.document.body.children[0].children[0].children[8].children[0].className = "html-case";
             window.document.body.children[0].children[0].children[8].children[0].style.top = "-35px";
             setTimeout(function() {
-                  window.document.body.children[0].children[0].children[8].children[0].style.display = "none";
-                  document.body.children[1].children[0].children[0].style.display ="none";
-                  document.body.children[1].children[0].children[1].style.display ="block";
-                  document.body.children[1].children[0].children[2].style.display ="block";
-                  document.body.children[1].children[0].children[2].children[0].style.display ="block";
-                  document.body.children[1].children[0].children[2].children[0].children[0].style.display ="block";
-                }, 1500);
-              }
+                window.document.body.children[0].children[0].children[8].children[0].style.display = "none";
+                document.body.children[1].children[0].children[0].style.display ="none";
+                document.body.children[1].children[0].children[1].style.display ="block";
+                document.body.children[1].children[0].children[2].style.display ="block";
+                document.body.children[1].children[0].children[2].children[0].style.display ="block";
+                document.body.children[1].children[0].children[2].children[0].children[0].style.display ="block";
+              }, 1500);
+            }
           }
 
           if ((parseFloat(left) >= 2740) && (parseFloat(left) <= 2855) && parseFloat(top) > 300){
@@ -2303,12 +2303,11 @@ window.onload = function(){
           var top = 270;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
           limiteSaut = '100px';
-        } else if (parseFloat(left) >= 780 && parseFloat(left) <= 810 && parseFloat(top) <= 100) {
+        } else if (parseFloat(left) >= 780 && parseFloat(left) <= 810 && parseFloat(top) < 127) {
           console.log("saut sur bloc haut 1");
-          var top = 100;
+          var top = 127;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
-        }
-      
+        }     
 
         if (parseFloat(left) >= 2730 && parseFloat(left) < 2855  && parseFloat(top) < 300) {
           console.log("saut sur bloc3");
