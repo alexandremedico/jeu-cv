@@ -1007,8 +1007,45 @@ window.onload = function(){
             bool = false;
           }
 
-          if (parseFloat(left) == 6790 && parseFloat(top) == 412) {
+          if (parseFloat(left) == 6790 && parseFloat(top) >= 200) {
             bool = false;
+          }
+
+
+          // descente dernier gros bloc
+          if (parseFloat(left) == 6700 && parseFloat(top) == 127) {
+            var top = 162;
+            window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          }
+
+          if (parseFloat(left) == 6660 && parseFloat(top) == 162) {
+            var top = 198;
+            window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          }
+
+          if (parseFloat(left) == 6620 && parseFloat(top) == 198) {
+            var top = 234;
+            window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          }
+
+          if (parseFloat(left) == 6590 && parseFloat(top) == 234) {
+            var top = 269;
+            window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          }
+
+          if (parseFloat(left) == 6550 && parseFloat(top) == 269) {
+            var top = 305;
+            window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          }
+
+          if (parseFloat(left) == 6520 && parseFloat(top) == 305) {
+            var top = 341;
+            window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          }
+
+          if (parseFloat(left) == 6480 && parseFloat(top) == 341) {
+            var top = 377;
+            window.document.body.children[0].children[0].children[0].style.top = top + 'px';
           }
 
           
@@ -1068,11 +1105,12 @@ window.onload = function(){
           if ((parseFloat(left) >= 556) && (parseFloat(left) <= 603) && parseFloat(top) > 310) {
             console.log('colision bloc 1');
             console.log('avant le saut' + sautBloc);
-            if (parseFloat(window.document.body.children[0].children[0].children[0].style.top) >= 331 && sauter == true) {
+            if (parseFloat(window.document.body.children[0].children[0].children[0].style.top) >= 327 && sauter == true) {
               console.log('saut');
-              var top = parseFloat(top) - 7;
-              window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+              // var top = parseFloat(top) - 7;
+              // window.document.body.children[0].children[0].children[0].style.top = top + 'px';
               // sautBloc = false;
+              limiteSaut = '321px';
               console.log('apres le saut' + sautBloc);
             } else {
               sauter = false;
@@ -1093,10 +1131,11 @@ window.onload = function(){
 
           if ((( parseFloat(left) >= 699) && (parseFloat(left) <= 890) && parseFloat(top) > 310)){
             console.log('colision bloc 2');
-            if (parseFloat(window.document.body.children[0].children[0].children[0].style.top) >= 331 && sauter == true) {
+            if (parseFloat(window.document.body.children[0].children[0].children[0].style.top) >= 327 && sauter == true) {
               console.log('saut');
-              var top = parseFloat(top) - 7;
-              window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+              // var top = parseFloat(top) - 7;
+              // window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+              limiteSaut = "321px";
             } else {
               sauter = false;
             }
@@ -1161,10 +1200,11 @@ window.onload = function(){
 
           if ((parseFloat(left) >= 2740) && (parseFloat(left) <= 2855) && parseFloat(top) > 300){
             console.log('colision bloc 3');
-            if (parseFloat(window.document.body.children[0].children[0].children[0].style.top) >= 331 && sauter == true) {
+            if (parseFloat(window.document.body.children[0].children[0].children[0].style.top) >= 327 && sauter == true) {
               console.log('saut');
-              var top = parseFloat(top) - 7;
-              window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+              // var top = parseFloat(top) - 7;
+              // window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+              limiteSaut = "321px";
             } else {
               sauter = false;
             }
@@ -1194,10 +1234,11 @@ window.onload = function(){
 
           if ((parseFloat(left) >= 3343) && (parseFloat(left) <= 3390) && parseFloat(top) > 300){
             console.log('colision bloc 4');
-            if (parseFloat(window.document.body.children[0].children[0].children[0].style.top) >= 331 && sauter == true) {
+            if (parseFloat(window.document.body.children[0].children[0].children[0].style.top) >= 327 && sauter == true) {
               console.log('saut');
-              var top = parseFloat(top) - 7;
-              window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+              // var top = parseFloat(top) - 7;
+              // window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+              limiteSaut = "321px";
             } else {
               sauter = false;
             }
@@ -1228,10 +1269,11 @@ window.onload = function(){
 
           if ((parseFloat(left) >= 3556) && (parseFloat(left) <= 3605) && parseFloat(top) > 300){
             console.log('colision bloc 5');
-            if (parseFloat(window.document.body.children[0].children[0].children[0].style.top) >= 331 && sauter == true) {
+            if (parseFloat(window.document.body.children[0].children[0].children[0].style.top) >= 327 && sauter == true) {
               console.log('saut');
-              var top = parseFloat(top) - 7;
-              window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+              // var top = parseFloat(top) - 7;
+              // window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+              limiteSaut = "321px";
             } else {
               sauter = false;
             }
@@ -1239,10 +1281,11 @@ window.onload = function(){
 
           if ((parseFloat(left) >= 3771) && (parseFloat(left) <= 3818) && parseFloat(top) > 300){
             console.log('colision bloc 6');
-            if (parseFloat(window.document.body.children[0].children[0].children[0].style.top) >= 331 && sauter == true) {
+            if (parseFloat(window.document.body.children[0].children[0].children[0].style.top) >= 327 && sauter == true) {
               console.log('saut');
-              var top = parseFloat(top) - 7;
-              window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+              // var top = parseFloat(top) - 7;
+              // window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+              limiteSaut = "321px";
             } else {
               sauter = false;
             }
@@ -1272,10 +1315,11 @@ window.onload = function(){
 
           if ((parseFloat(left) >= 3877) && (parseFloat(left) <= 3925) && parseFloat(top) > 300){
             console.log('colision bloc 7');
-            if (parseFloat(window.document.body.children[0].children[0].children[0].style.top) >= 331 && sauter == true) {
+            if (parseFloat(window.document.body.children[0].children[0].children[0].style.top) >= 327 && sauter == true) {
               console.log('saut');
-              var top = parseFloat(top) - 7;
-              window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+              // var top = parseFloat(top) - 7;
+              // window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+              limiteSaut = "321px";
             } else {
               sauter = false;
             }
@@ -1318,10 +1362,11 @@ window.onload = function(){
 
           if ((parseFloat(left) >= 3986) && (parseFloat(left) <= 4033) && parseFloat(top) > 300){
             console.log('colision bloc 8');
-            if (parseFloat(window.document.body.children[0].children[0].children[0].style.top) >= 331 && sauter == true) {
+            if (parseFloat(window.document.body.children[0].children[0].children[0].style.top) >= 327 && sauter == true) {
               console.log('saut');
-              var top = parseFloat(top) - 7;
-              window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+              // var top = parseFloat(top) - 7;
+              // window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+              limiteSaut = "321px";
             } else {
               sauter = false;
             }
@@ -1341,10 +1386,11 @@ window.onload = function(){
 
           if ((parseFloat(left) >= 4199) && (parseFloat(left) <= 4248) && parseFloat(top) > 300){
             console.log('colision bloc 9');
-            if (parseFloat(window.document.body.children[0].children[0].children[0].style.top) >= 331 && sauter == true) {
+            if (parseFloat(window.document.body.children[0].children[0].children[0].style.top) >= 327 && sauter == true) {
               console.log('saut');
-              var top = parseFloat(top) - 7;
-              window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+              // var top = parseFloat(top) - 7;
+              // window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+              limiteSaut = "321px";
             } else {
               sauter = false;
             }
@@ -1352,10 +1398,11 @@ window.onload = function(){
 
           if ((parseFloat(left) >= 4592) && (parseFloat(left) <= 4676) && parseFloat(top) > 300){
             console.log('colision bloc 10');
-            if (parseFloat(window.document.body.children[0].children[0].children[0].style.top) >= 331 && sauter == true) {
+            if (parseFloat(window.document.body.children[0].children[0].children[0].style.top) >= 327 && sauter == true) {
               console.log('saut');
-              var top = parseFloat(top) - 7;
-              window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+              // var top = parseFloat(top) - 7;
+              // window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+              limiteSaut = "321px";
             } else {
               sauter = false;
             }
@@ -1409,10 +1456,11 @@ window.onload = function(){
           
           if ((parseFloat(left) >= 5985) && (parseFloat(left) <= 6140) && parseFloat(top) > 300){
             console.log('colision bloc 11');
-            if (parseFloat(window.document.body.children[0].children[0].children[0].style.top) >= 331 && sauter == true) {
+            if (parseFloat(window.document.body.children[0].children[0].children[0].style.top) >= 327 && sauter == true) {
               console.log('saut');
-              var top = parseFloat(top) - 7;
-              window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+              // var top = parseFloat(top) - 7;
+              // window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+              limiteSaut = "321px";
             } else {
               sauter = false;
             }
@@ -1678,7 +1726,7 @@ window.onload = function(){
               sauter == true;
             }
 
-            if (parseFloat(left) == 6460 && parseFloat(top) == 341) {
+            if (parseFloat(left) == 6470 && parseFloat(top) == 341) {
               var top = 376;
               window.document.body.children[0].children[0].children[0].style.top = top + 'px';
               sauter == true;
@@ -1776,8 +1824,37 @@ window.onload = function(){
 
 
             // gros bloc 5
-            if (parseFloat(left) == 6460 && parseFloat(top) == 412) {
+            if (parseFloat(left) == 6480 && parseFloat(top) >= 342) {
               bool = false;
+            }
+
+            if (parseFloat(left) == 6520 && parseFloat(top) >= 306) {
+              bool = false;
+            }
+
+            if (parseFloat(left) == 6550 && parseFloat(top) >= 270) {
+              bool = false;
+            }
+
+            if (parseFloat(left) == 6590 && parseFloat(top) >= 235) {
+              bool = false;
+            }
+
+            if (parseFloat(left) == 6620 && parseFloat(top) >= 199) {
+              bool = false;
+            }
+
+            if (parseFloat(left) == 6660 && parseFloat(top) >= 163) {
+              bool = false;
+            }
+
+            if (parseFloat(left) == 6700 && parseFloat(top) >= 128) {
+              bool = false;
+            }
+
+            if (parseFloat(left) >= 6790 && parseFloat(top) == 127) {
+              var top = 412;
+              window.document.body.children[0].children[0].children[0].style.top = top + 'px';
             }
 
 
@@ -2147,6 +2224,12 @@ window.onload = function(){
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
         }
 
+        if (parseFloat(top) >= 90 && parseFloat(left) >= 6790 && parseFloat(left) <= 7050) {
+          console.log('descente 15');
+          var top = 412;
+          window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+        }
+
 
         // descente en dessous des cases
         if (parseFloat(left) >= 550 && parseFloat(left) < 600 && parseFloat(top) > 310) {
@@ -2485,6 +2568,63 @@ window.onload = function(){
           var top = 377;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
           limiteSaut = '200px';
+        }
+
+
+        // descente sur gros bloc 5
+        if (parseFloat(left) >= 6460 && parseFloat(left) <= 6480 && parseFloat(top) < 376) {
+          console.log("saut sur le gros bloc 17");
+          var top = 377;
+          window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '200px';
+        }
+
+        if (parseFloat(left) >= 6490 && parseFloat(left) <= 6520 && parseFloat(top) < 340) {
+          console.log("saut sur le gros bloc 18");
+          var top = 341;
+          window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '170px';
+        }
+
+        if (parseFloat(left) >= 6530 && parseFloat(left) <= 6550 && parseFloat(top) < 304) {
+          console.log("saut sur le gros bloc 19");
+          var top = 305;
+          window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '130px';
+        }
+
+        if (parseFloat(left) >= 6560 && parseFloat(left) <= 6590 && parseFloat(top) < 270) {
+          console.log("saut sur le gros bloc 20");
+          var top = 269;
+          window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '100px';
+        }
+
+        if (parseFloat(left) >= 6600 && parseFloat(left) <= 6620 && parseFloat(top) < 235) {
+          console.log("saut sur le gros bloc 21");
+          var top = 234;
+          window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '100px';
+        }
+
+        if (parseFloat(left) >= 6630 && parseFloat(left) <= 6660 && parseFloat(top) < 199) {
+          console.log("saut sur le gros bloc 22");
+          var top = 198;
+          window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '100px';
+        }
+
+        if (parseFloat(left) >= 6670 && parseFloat(left) <= 6700 && parseFloat(top) < 163) {
+          console.log("saut sur le gros bloc 23");
+          var top = 162;
+          window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '100px';
+        }
+
+        if (parseFloat(left) >= 6710 && parseFloat(left) <= 6780) {
+          var top = 127;
+          window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '100px';
         }
 
 
