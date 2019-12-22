@@ -1,0 +1,188 @@
+/* piece */
+#piece, #containerImage{
+    position: absolute;
+}
+
+.piece {
+    position: absolute;
+    display: none;
+    width: 32px;
+    height: 32px;
+    left: 574px;
+    top: 253px;
+}
+
+.masquePiece {
+    left: 752px;
+    top: 254px;
+    width: 32px;
+    height: 32px;
+}
+
+/* piece1 */
+#piece1, #containerImage1{
+    position: absolute;
+}
+
+.piece1 {
+    position: absolute;
+    display: none;
+    width: 32px;
+    height: 32px;
+    left: 752px;
+    top: 253px;
+}
+
+.masquePiece1 {
+    left: 752px;
+    top: 254px;
+    width: 32px;
+    height: 32px;
+}
+
+/* piece 2 */
+#piece2, #containerImage2{
+    position: absolute;
+}
+
+.piece2 {
+    position: absolute;
+    display: none;
+    width: 32px;
+    height: 32px;
+    left: 824px;
+    top: 253px;
+}
+
+.masquePiece2 {
+    left: 824px;
+    top: 254px;
+    width: 32px;
+    height: 32px;
+}
+
+/* piece 3 */
+#piece3, #containerImage3{
+    position: absolute;
+}
+
+.piece3 {
+    position: absolute;
+    display: none;
+    width: 32px;
+    height: 32px;
+    left: 3895px;
+    top: 253px;
+}
+
+.masquePiece3 {
+    left: 824px;
+    top: 254px;
+    width: 32px;
+    height: 32px;
+}
+
+/* piece 4 */
+#piece4, #containerImage4{
+    position: absolute;
+}
+
+.piece4 {
+    position: absolute;
+    display: none;
+    width: 32px;
+    height: 32px;
+    left: 4002px;
+    top: 253px;
+}
+
+.masquePiece4 {
+    left: 824px;
+    top: 254px;
+    width: 32px;
+    height: 32px;
+}
+
+/* piece 5 */
+#piece5, #containerImage5{
+    position: absolute;
+}
+
+.piece5 {
+    position: absolute;
+    display: none;
+    width: 32px;
+    height: 32px;
+    left: 3359px;
+    top: 109px;
+}
+
+.masquePiece5 {
+    left: 824px;
+    top: 254px;
+    width: 32px;
+    height: 32px;
+}
+
+/* piece 6 */
+#piece6, #containerImage6{
+    position: absolute;
+}
+
+.piece6 {
+    position: absolute;
+    display: none;
+    width: 32px;
+    height: 32px;
+    left: 3895px;
+    top: 109px;
+}
+
+.masquePiece6 {
+    left: 824px;
+    top: 254px;
+    width: 32px;
+    height: 32px;
+}
+
+/* piece 7 */
+#piece7, #containerImage7{
+    position: absolute;
+}
+
+.piece7 {
+    position: absolute;
+    display: none;
+    width: 32px;
+    height: 32px;
+    left: 4609px;
+    top: 109px;
+}
+
+.masquePiece7 {
+    left: 824px;
+    top: 254px;
+    width: 32px;
+    height: 32px;
+}
+
+/* piece 8 */
+#piece8, #containerImage8{
+    position: absolute;
+}
+
+.piece8 {
+    position: absolute;
+    display: none;
+    width: 32px;
+    height: 32px;
+    left: 4645px;
+    top: 109px;
+}
+
+.masquePiece8 {
+    left: 824px;
+    top: 254px;
+    width: 32px;
+    height: 32px;
+}
