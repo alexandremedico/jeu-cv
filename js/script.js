@@ -883,7 +883,7 @@ window.onload = function(){
             document.location.reload();}
             , 1500);
           }
-          if (parseFloat(left) >= 3070 && parseFloat(left) <= 3170 && parseFloat(top) == 412) {
+          if (parseFloat(left) >= 3070 && parseFloat(left) < 3170 && parseFloat(top) == 412) {
             console.log('trou 2');
             window.document.body.children[0].children[0].children[0].className = "masque tomber";
             setTimeout(function(){sprite2.style.left = mort.perso[0].leftDeImage;}, 100);
@@ -1045,6 +1045,38 @@ window.onload = function(){
 
           if (parseFloat(left) == 6480 && parseFloat(top) == 341) {
             var top = 377;
+            window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          }
+
+
+          // descente 2e etage par la gauche
+          if (parseFloat(top) == 127 && parseFloat(left) == 770) {
+            var top = 270;
+            window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          }
+
+          if (parseFloat(top) == 127 && parseFloat(left) == 2840) {
+            var top = 270;
+            window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          }
+
+          if (parseFloat(top) == 127 && parseFloat(left) == 3230) {
+            var top = 412;
+            window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          }
+
+          if (parseFloat(top) == 127 && parseFloat(left) == 3870) {
+            var top = 412;
+            window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          }
+
+          if (parseFloat(top) == 127 && parseFloat(left) == 4300) {
+            var top = 412;
+            window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          }
+
+          if (parseFloat(top) == 127 && parseFloat(left) == 4550) {
+            var top = 412;
             window.document.body.children[0].children[0].children[0].style.top = top + 'px';
           }
 
@@ -1858,6 +1890,44 @@ window.onload = function(){
             }
 
 
+            // descente 2e etage de case
+            if (parseFloat(top) == 127 && parseFloat(left) == 820) {
+              var top = 270;
+              window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+            }
+
+            if (parseFloat(top) == 127 && parseFloat(left) == 3140) {
+              var top = 484;
+              window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+              window.document.body.children[0].children[0].children[0].className = "masque tomber";
+              setTimeout(function(){sprite.style.left = mort.perso[0].leftDeImage;}, 100);
+              window.document.body.children[0].children[0].children[0].className = "masque tomber mort";
+              setTimeout(function(){alert('Vous êtes mort !');
+              document.location.reload();}
+              , 1500);
+            }
+
+            if (parseFloat(top) == 127 && parseFloat(left) == 3390) {
+              var top = 412;
+              window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+            }
+
+            if (parseFloat(top) == 127 && parseFloat(left) == 3930) {
+              var top = 412;
+              window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+            }
+
+            if (parseFloat(top) == 127 && parseFloat(left) == 4430) {
+              var top = 412;
+              window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+            }
+
+            if (parseFloat(top) == 127 && parseFloat(left) == 4720) {
+              var top = 412;
+              window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+            }
+
+
             // trou
             if (parseFloat(left) >= 2465 && parseFloat(left) <= 2525 && parseFloat(top) == 412) {
               console.log('trou');
@@ -2116,14 +2186,14 @@ window.onload = function(){
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
         }
 
-        if (parseFloat(top) >= 90 && parseFloat(left) > 2859 && parseFloat(left) <= 3060) {
+        if (parseFloat(top) >= 179 && parseFloat(left) > 2859 && parseFloat(left) <= 3060) {
           console.log('descente avant trou 2');
           var top = 412;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
         }
 
-        if (parseFloat(top) >= 90 && parseFloat(left) >= 3070 && parseFloat(left) < 3170) {
-          console.log('descente trou 1');
+        if (parseFloat(top) >= 179 && parseFloat(left) >= 3070 && parseFloat(left) < 3170) {
+          console.log('descente trou 2');
           var top = 484;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
           window.document.body.children[0].children[0].children[0].className = "masque tomber";
@@ -2134,7 +2204,13 @@ window.onload = function(){
           , 1500);
         }
 
-        if (parseFloat(top) >= 90 && parseFloat(left) >= 3170 && parseFloat(left) <= 3340) {
+        if (parseFloat(top) >= 90 && parseFloat(left) >= 3170 && parseFloat(left) <= 3230) {
+          console.log('descente apres trou 2');
+          var top = 412;
+          window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+        }
+
+        if (parseFloat(top) >= 179 && parseFloat(left) >= 3240 && parseFloat(left) <= 3340) {
           console.log('descente apres trou 2');
           var top = 412;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
@@ -2170,13 +2246,31 @@ window.onload = function(){
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
         }
 
-        if (parseFloat(top) >= 90 && parseFloat(left) >= 4250 && parseFloat(left) <= 4590) {
+        if (parseFloat(top) >= 90 && parseFloat(left) >= 4250 && parseFloat(left) <= 4300) {
           console.log('descente 12');
           var top = 412;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
         }
 
-        if (parseFloat(top) >= 90 && parseFloat(left) >= 4680 && parseFloat(left) <= 4770) {
+        if (parseFloat(top) >= 179 && parseFloat(left) >= 4310 && parseFloat(left) <= 4420) {
+          console.log('descente 12');
+          var top = 412;
+          window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+        }
+
+        if (parseFloat(top) >= 90 && parseFloat(left) >= 4430 && parseFloat(left) <= 4550) {
+          console.log('descente 12');
+          var top = 412;
+          window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+        }
+
+        if (parseFloat(top) >= 179 && parseFloat(left) >= 4560 && parseFloat(left) <= 4590) {
+          console.log('descente 12');
+          var top = 412;
+          window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+        }
+
+        if (parseFloat(top) >= 179 && parseFloat(left) >= 4680 && parseFloat(left) <= 4770) {
           console.log('descente avant gros bloc 1');
           var top = 412;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
@@ -2298,16 +2392,19 @@ window.onload = function(){
           limiteSaut = '100px';
         }
 
-        if (parseFloat(left) >= 699 && parseFloat(left) < 890  && parseFloat(top) < 300) {
+        if (parseFloat(left) >= 699 && parseFloat(left) <= 770  && parseFloat(top) < 300) {
           console.log("saut sur bloc2");
           var top = 270;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
           limiteSaut = '100px';
-        } else if (parseFloat(left) >= 780 && parseFloat(left) <= 810 && parseFloat(top) < 127) {
-          console.log("saut sur bloc haut 1");
-          var top = 127;
+        }  
+        
+        if (parseFloat(left) >= 820 && parseFloat(left) < 880  && parseFloat(top) < 300) {
+          console.log("saut sur bloc2");
+          var top = 270;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
-        }     
+          limiteSaut = '100px';
+        }
 
         if (parseFloat(left) >= 2730 && parseFloat(left) < 2855  && parseFloat(top) < 300) {
           console.log("saut sur bloc3");
@@ -2316,7 +2413,7 @@ window.onload = function(){
           limiteSaut = '100px';
         }
 
-        if (parseFloat(left) >= 3340 && parseFloat(left) < 3390  && parseFloat(top) < 300) {
+        if (parseFloat(left) >= 3340 && parseFloat(left) < 3390  && parseFloat(top) < 300 && parseFloat(top) >= 172) {
           console.log("saut sur bloc4");
           var top = 270;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
@@ -2337,7 +2434,7 @@ window.onload = function(){
           limiteSaut = '100px';
         }
 
-        if (parseFloat(left) >= 3877 && parseFloat(left) < 3927  && parseFloat(top) < 300) {
+        if (parseFloat(left) >= 3877 && parseFloat(left) < 3927  && parseFloat(top) < 300 && parseFloat(top) >= 172) {
           console.log("saut sur bloc7");
           var top = 270;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
@@ -2358,7 +2455,7 @@ window.onload = function(){
           limiteSaut = '100px';
         }
 
-        if (parseFloat(left) >= 4589 && parseFloat(left) < 4676  && parseFloat(top) < 300) {
+        if (parseFloat(left) >= 4589 && parseFloat(left) < 4676  && parseFloat(top) < 300 && parseFloat(top) >= 172) {
           console.log("saut sur bloc10");
           var top = 270;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
@@ -2621,6 +2718,50 @@ window.onload = function(){
         }
 
         if (parseFloat(left) >= 6710 && parseFloat(left) <= 6780) {
+          var top = 127;
+          window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '100px';
+        }
+
+
+        // descente sur 2e etage
+        if (parseFloat(left) >= 780 && parseFloat(left) <= 810 && parseFloat(top) < 127) {
+          console.log("saut sur bloc haut 1");
+          var top = 127;
+          window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '100px';
+        }  
+
+        if (parseFloat(left) >= 2850 && parseFloat(left) <= 3130 && parseFloat(top) < 127) {
+          console.log("saut sur bloc haut 2");
+          var top = 127;
+          window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '100px';
+        }
+
+        if (parseFloat(left) >= 3240 && parseFloat(left) <= 3390 && parseFloat(top) < 127) {
+          console.log("saut sur bloc haut 3");
+          var top = 127;
+          window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '100px';
+        }
+
+        if (parseFloat(left) >= 3880 && parseFloat(left) <= 3920 && parseFloat(top) < 127) {
+          console.log("saut sur bloc haut 4");
+          var top = 127;
+          window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '100px';
+        }
+
+        if (parseFloat(left) >= 4310 && parseFloat(left) <= 4420 && parseFloat(top) < 127) {
+          console.log("saut sur bloc haut 5");
+          var top = 127;
+          window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '100px';
+        }
+
+        if (parseFloat(left) >= 4560 && parseFloat(left) <= 4710 && parseFloat(top) < 127) {
+          console.log("saut sur bloc haut 6");
           var top = 127;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
           limiteSaut = '100px';
