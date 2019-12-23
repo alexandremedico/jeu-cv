@@ -1,3 +1,5 @@
+"use strict";
+
 window.onload = function(){
     var masque = window.document.getElementById('container');
     var sprite = window.document.getElementById('contenu');
@@ -437,20 +439,20 @@ window.onload = function(){
     }
 
     // variable
-    i = 0;
-    j = 0;
-    k = 0;
-    l = 0;
-    m = 0;
-    n = 0;
-    o = 0;
-    p = 0;
-    q = 0;
-    r = 0;
-    s = 0;
-    t = 0;
-    u = 0;
-    v = 0;
+    var i = 0;
+    var j = 0;
+    var k = 0;
+    var l = 0;
+    var m = 0;
+    var n = 0;
+    var o = 0;
+    var p = 0;
+    var q = 0;
+    var r = 0;
+    var s = 0;
+    var t = 0;
+    var u = 0;
+    var v = 0;
     var bool = true;
     var sauter = true;
     var sautBloc = true;
