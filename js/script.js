@@ -869,7 +869,7 @@ window.onload = function(){
 
 
           // collisions cotés droit 2e etage
-          if (parseFloat(top) > 128 && parseFloat(top) < 178 && parseFloat(left) >= 770 && parseFloat(left) <= 820) {
+          if (parseFloat(top) > 128 && parseFloat(top) < 178 && parseFloat(left) == 820) {
             console.log('colision Bloc 1 2e etage Gauche');
             bool = false;
             sautBloc = false;
@@ -1698,7 +1698,7 @@ window.onload = function(){
 
 
             // collisions cotés droit 2e etage
-            if (parseFloat(top) > 128 && parseFloat(top) < 178 && parseFloat(left) >= 770 && parseFloat(left) < 820) {
+            if (parseFloat(top) > 128 && parseFloat(top) < 178 && parseFloat(left) == 770) {
               console.log('colision Bloc 1 2e etage');
               bool = false;
               sautBloc = false;
@@ -2841,6 +2841,14 @@ window.onload = function(){
           var top = 127;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
           limiteSaut = '100px';
+        }
+
+
+        // descente sous 2e etage
+        if (parseFloat(left) >= 780 && parseFloat(left) <= 810 && parseFloat(top) >= 172 && parseFloat(top) <= 271) {
+          console.log("saut sous bloc haut 1");
+          var top = 270;
+          window.document.body.children[0].children[0].children[0].style.top = top + 'px';
         }
 
 
