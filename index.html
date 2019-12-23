@@ -198,33 +198,39 @@
           </div> 
      </div>
 
-     <div class="texte">
+     <div class="texte" id="texte">
        <div class="footer1">
-         <p><img id="mario1" src="./image/mario-normal.png" alt=""> <img class="fleche1" src="./image/keyboard-key-pointing-to-right.png" alt="">  Flèche de droite : pour aller à droite.</p>
-         <p><img id="mario2" src="./image/mario-normal.png" alt=""> <img class="fleche1" src="./image/left-arrow-variant-key-on-keyboard.png" alt="">  Flèche de gauche : pour aller à gauche.</p>
+         <p><img id="mario1" src="./image/mario-normal.png" alt=""> <img class="fleche1" src="./image/keyboard-key-pointing-to-right.png" alt="">  Flèche de droite : pour aller a droite.</p>
+         <p><img id="mario2" src="./image/mario-normal.png" alt=""> <img class="fleche1" src="./image/left-arrow-variant-key-on-keyboard.png" alt="">  Flèche de gauche : pour aller a gauche.</p>
        </div>
       <p><img src="./image/saut.png" alt=""><img class="fleche" src="./image/keyboard-key-arrow-up.png" alt="">  Flèche du haut : pour sauter.</p>
       <p><img src="./image/saut.png" alt=""><img class="fleche" src="./image/keyboard-key-arrow-up.png" alt=""><img class="fleche" src="./image/keyboard-key-pointing-to-right.png" alt=""> ou <img class="fleche" src="./image/left-arrow-variant-key-on-keyboard.png" alt="">  Pour le saut, rester appuyer sur la flèche haut et appuyer sur la flèche de droite ou de gauche pour se déplacer.</p>
-      <p>Si une collision ne se fait pas recharger la page.(en cours de correction)</p>
+      <!-- <p>Si une collision ne se fait pas recharger la page.(en cours de correction)</p>
       <p>Si le saut ne se fait pas bien faites 2 mini saut pour le reset.(en cours de correction)</p>
-      <p>Collisions pas complétement faites sur les gros carrés vers la fin.</p>
+      <p>Collisions pas complétement faites sur les gros carrés vers la fin.</p> -->
     </div>
 
     <footer>
       <nav>
         <ul>
-          <!-- <li><a id="accueil" href="#">
-            <span class="text">Accueil</span>
+          <li><a id="accueil" onclick="location.reload()" href="#">
+            <span class="text">Restart</span>
             <span class="line -right"></span>
             <span class="line -top"></span>
             <span class="line -left"></span>
-            <span class="line -bottom"></span></a></li> -->
+            <span class="line -bottom"></span></a></li>
           <li><a id="cv" href="https://alexandremedico.github.io/cv/" target="_blank">
             <span class="text bouton">Mon Cv</span>
             <span class="line -right"></span>
             <span class="line -top"></span>
             <span class="line -left"></span>
             <span class="line -bottom"></span></a></li>
+            <li onclick="timer()"><a id="regles">
+              <span class="text bouton">Règles</span>
+              <span class="line -right"></span>
+              <span class="line -top"></span>
+              <span class="line -left"></span>
+              <span class="line -bottom"></span></a></li>
         </ul>
       </nav>
     </footer>

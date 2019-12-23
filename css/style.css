@@ -3,10 +3,16 @@
     padding: 0;
 }
 
+@font-face {
+  font-family: 'Pixel';
+  src: url('../fonts/Pixeled.ttf') format('truetype');
+}
+
 body{
     width: 100vw;
     height: 100vh;
     position: relative;
+    font-family: 'Pixel';
 }
 
 .fond{
@@ -22,7 +28,7 @@ body{
     width: 620px;
     height: 500px;
     position: absolute;
-    top: 250px;
+    top: 150px;
     left: 100px;
     overflow: hidden;
 }
@@ -181,43 +187,66 @@ body{
 }
 
 .texte {
-  position: relative;
-  top : 30px;
-  left : 30px;
+  position: absolute;
+  top: 30%;
+  left: 25%;
   width: 45%;
+  border: 2px solid black;
+  padding: 5px;
+  background-color: wheat;
 }
 
 /* bouton */
 #accueil {
-  color: #f26522;
+  /* color: #f26522; */
+  color: red;
   padding: 1em;
   display: inline-block;
   border: 3px solid transparent;
-  position: relative;
+  position: absolute;
   font-size: 1.5em;
   cursor: pointer;
   letter-spacing: 0.07em;
   text-decoration: none;
-  top: 600px;
+  top: 675px;
   width: 10%;
   text-align: center;
+  left: 100px;
 }
 
 #cv {
-  color: #f26522;
+  /* color: #f26522; */
   padding: 1em;
   display: inline-block;
   border: 3px solid transparent;
-  position: relative;
+  position: absolute;
   font-size: 1.5em;
   cursor: pointer;
   letter-spacing: 0.07em;
   text-decoration: none;
-  top: 590px;
+  top: 675px;
   width: 10%;
   text-align: center;
-  left: 280px;
+  left: 350px;
 }
+
+#regles {
+  /* color: #f26522; */
+  color: red;
+  padding: 1em;
+  display: inline-block;
+  border: 3px solid transparent;
+  position: absolute;
+  font-size: 1.5em;
+  cursor: pointer;
+  letter-spacing: 0.07em;
+  text-decoration: none;
+  top: 675px;
+  width: 10%;
+  text-align: center;
+  left: 590px;
+}
+
 
 
 a .text {
@@ -453,13 +482,14 @@ a:hover .-bottom, a:active .-bottom {
 
 /* score */
 .score {
-  width: 80px;
+  width: 115px;
   position: absolute;
   left: 10px;
   top: 10px;
   text-align: center;
   background-color: white;
   color: black;
+  font-size: 10px;
 }
 
 
@@ -468,7 +498,7 @@ div p img {
 }
 
 #mario1, #mario2{
-  width: 5%;
+  width: 6%;
 }
 
 .fleche {

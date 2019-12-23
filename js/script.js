@@ -46,6 +46,7 @@ window.onload = function(){
     var masquePiece1 = window.document.getElementById('containerPiece1');
     var spritePiece1 = window.document.getElementById('spritePiece1');
 
+
     // goomba
     // var goombaLeft = window.document.body.children[0].children[1].style.left;
     // if ('' === goombaLeft){
@@ -2224,6 +2225,13 @@ window.onload = function(){
           console.log('descente 1');
           var top = 412;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          // var descente = setInterval(function () {
+          //   var top = parseFloat(top) + 7;
+          //   window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          //   if (parseFloat(top) == 412) {
+          //     clearInterval(descente);
+          //   }
+          // }, 200);
         }
 
         if (parseFloat(top) >= 90 && parseFloat(left) >= 600 && parseFloat(left) <= 700) {
@@ -2885,4 +2893,15 @@ window.onload = function(){
       break;
       }
     }
+
+    timer();
 }
+
+// setinterval pour les regles
+var timer = function () {
+  window.document.body.children[2].style.display = "block";
+  setTimeout(function() {
+    window.document.body.children[2].style.display = "none";
+  }, 15000);
+}
+
