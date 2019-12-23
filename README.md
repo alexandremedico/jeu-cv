@@ -1,4 +1,4 @@
-# Jeu-cv
+# Jeu-CV
 
 Voici un mini-jeu cv dans le cadre de la formation que je suis actuellement.
 
