@@ -1118,6 +1118,15 @@ window.onload = function(){
             window.document.body.children[0].children[0].children[0].style.top = top + 'px';
           }
 
+          if (parseFloat(left) >= 7050 && parseFloat(left) <= 7110 && parseFloat(top) >= 378) {
+            bool = false;
+          }
+
+          if (parseFloat(top) == 377 && parseFloat(left) == 7050) {
+            var top = 412;
+            window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          }
+
           
         break;
 
@@ -1965,6 +1974,10 @@ window.onload = function(){
               window.document.body.children[0].children[0].children[0].style.top = top + 'px';
             }
 
+            if (parseFloat(left) >= 7050 && parseFloat(left) <= 7110 && parseFloat(top) >= 378) {
+              bool = false;
+            }
+
 
             // descente 2e etage de case
             if (parseFloat(top) == 127 && parseFloat(left) == 820) {
@@ -1999,6 +2012,11 @@ window.onload = function(){
             }
 
             if (parseFloat(top) == 127 && parseFloat(left) == 4720) {
+              var top = 412;
+              window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+            }
+
+            if (parseFloat(top) == 377 && parseFloat(left) == 7110) {
               var top = 412;
               window.document.body.children[0].children[0].children[0].style.top = top + 'px';
             }
@@ -2396,6 +2414,18 @@ window.onload = function(){
 
         if (parseFloat(top) >= 90 && parseFloat(left) >= 6790 && parseFloat(left) <= 7050) {
           console.log('descente 15');
+          var top = 412;
+          window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+        }
+
+        if (parseFloat(top) >= 90 && parseFloat(left) >= 7060 && parseFloat(left) <= 7100) {
+          console.log('descente 16');
+          var top = 377;
+          window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+        }
+
+        if (parseFloat(top) >= 90 && parseFloat(left) >= 7110) {
+          console.log('descente 16');
           var top = 412;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
         }
