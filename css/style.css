@@ -517,3 +517,18 @@ div p img {
 .bouton {
   color: red;
 }
+
+
+/* bouton fermer regle */
+#close{
+  text-align: center;
+  text-decoration: underline;
+}
+
+#close:hover {
+  text-decoration: none;
+  cursor: pointer;
+  background-image: url('../image/error.png');
+  background-repeat: no-repeat;
+  background-size: 4%;
+}

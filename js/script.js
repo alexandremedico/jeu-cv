@@ -2907,3 +2907,10 @@ var timer = function () {
   }, 15000);
 }
 
+var closeRegle = function () {  
+  // alert('je suis la');
+  var close1 = window.document.getElementById('texte');
+  close1.style.display = "none";
+}
+
+
