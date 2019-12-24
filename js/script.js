@@ -477,6 +477,16 @@ window.onload = function(){
     var carre7 = true;
     var carre8 = true;
     var carre9 = true;
+    var alert1 = true;
+    var alert2 = true;
+    var alert3 = true;
+    var alert4 = true;
+    var alert5 = true;
+    var alert6 = true;
+    var alert7 = true;
+    var alert8 = true;
+    var alert9 = true;
+    var alert10 = true;
 
     
     // animation case
@@ -912,43 +922,43 @@ window.onload = function(){
           // trou
           if (parseFloat(left) >= 2465 && parseFloat(left) <= 2525 && parseFloat(top) == 412) {
             console.log('trou');
+            bool = false;
             window.document.body.children[0].children[0].children[0].className = "masque tomber";
             setTimeout(function(){sprite2.style.left = mort.perso[0].leftDeImage;}, 100);
             window.document.body.children[0].children[0].children[0].className = "masque tomber mort";
-            setTimeout(function(){alert('Vous êtes mort !');
-            // window.document.body.children[0].children[0].children[0].style.left = "200px";
-            // window.document.body.children[0].children[0].children[0].style.top = "412px";
-            // window.document.body.children[0].children[0].style.left = "0px";
-            // sprite2.style.left = decompositionDuSprite.perso[0].leftDeImage;
-            // window.document.body.children[0].children[0].children[0].className = "masque";
+            setTimeout(function(){
+              if (alert4 == true) {
+                alert4 = false;
+                alert('Vous êtes mort !');
+              }
             document.location.reload();}
             , 1500);
           }
           if (parseFloat(left) >= 3070 && parseFloat(left) < 3170 && parseFloat(top) == 412) {
             console.log('trou 2');
+            bool = false;
             window.document.body.children[0].children[0].children[0].className = "masque tomber";
             setTimeout(function(){sprite2.style.left = mort.perso[0].leftDeImage;}, 100);
             window.document.body.children[0].children[0].children[0].className = "masque tomber mort";
-            setTimeout(function(){alert('Vous êtes mort !');
-            // window.document.body.children[0].children[0].children[0].style.left = "200px";
-            // window.document.body.children[0].children[0].children[0].style.top = "412px";
-            // window.document.body.children[0].children[0].style.left = "0px";
-            // sprite2.style.left = decompositionDuSprite.perso[0].leftDeImage;
-            // window.document.body.children[0].children[0].children[0].className = "masque";
+            setTimeout(function(){
+              if (alert5 == true) {
+                alert5 = false;
+                alert('Vous êtes mort !');
+              }
             document.location.reload();}
             , 1500)
           }
           if (parseFloat(left) >= 5465 && parseFloat(left) <= 5530 && parseFloat(top) == 412) {
             console.log('trou 3');
+            bool = false;
             window.document.body.children[0].children[0].children[0].className = "masque tomber";
             setTimeout(function(){sprite2.style.left = mort.perso[0].leftDeImage;}, 100);
             window.document.body.children[0].children[0].children[0].className = "masque tomber mort";
-            setTimeout(function(){alert('Vous êtes mort !');
-            // window.document.body.children[0].children[0].children[0].style.left = "200px";
-            // window.document.body.children[0].children[0].children[0].style.top = "412px";
-            // window.document.body.children[0].children[0].style.left = "0px";
-            // sprite2.style.left = decompositionDuSprite.perso[0].leftDeImage;
-            // window.document.body.children[0].children[0].children[0].className = "masque";
+            setTimeout(function(){
+              if (alert6 == true) {
+                alert6 = false;
+                alert('Vous êtes mort !');
+              }
             document.location.reload();}
             , 1500)
           }
@@ -1164,24 +1174,7 @@ window.onload = function(){
             window.document.body.children[0].children[0].children[0].style.top = top + 'px';
           }
           
-          // window.document.body.children[0].children[0].children[0].style.top = top + 'px';
-          // window.document.body.children[0].children[0].children[0].className = "masque saut";
-          // window.document.body.children[0].children[0].children[0].className = "masque sautUp";
-          // var index = 412, nbr = 0;
-          // var setElt = setInterval(function(){
-          //   window.document.body.children[0].children[0].children[0].style.top= index+"px";
-          //   if (index >= 412) {
-          //     if(nbr === 1){
-          //         clearInterval(setElt)
-          //     }
-          //     nbr = -1;
-          //   } else if (index <= 240) {
-          //     nbr = 1;
-          //   };
-          //   index = index + nbr;
-          // },5);
           sauter = true;
-
 
           // bloc bas des carrés
           if ((parseFloat(left) >= 556) && (parseFloat(left) <= 603) && parseFloat(top) > 310) {
@@ -1990,11 +1983,16 @@ window.onload = function(){
 
             if (parseFloat(top) == 127 && parseFloat(left) == 3140) {
               var top = 484;
+              bool = false;
               window.document.body.children[0].children[0].children[0].style.top = top + 'px';
               window.document.body.children[0].children[0].children[0].className = "masque tomber";
               setTimeout(function(){sprite.style.left = mort.perso[0].leftDeImage;}, 100);
               window.document.body.children[0].children[0].children[0].className = "masque tomber mort";
-              setTimeout(function(){alert('Vous êtes mort !');
+              setTimeout(function(){
+                if (alert7 == true) {
+                  alert7 = false;
+                  alert('Vous êtes mort !');
+                }
               document.location.reload();}
               , 1500);
             }
@@ -2028,43 +2026,43 @@ window.onload = function(){
             // trou
             if (parseFloat(left) >= 2465 && parseFloat(left) <= 2525 && parseFloat(top) == 412) {
               console.log('trou');
+              bool = false;
               window.document.body.children[0].children[0].children[0].className = "masque tomber";
               setTimeout(function(){sprite.style.left = mort.perso[0].leftDeImage;}, 100);
               window.document.body.children[0].children[0].children[0].className = "masque tomber mort";
-              setTimeout(function(){alert('Vous êtes mort !');
-              // window.document.body.children[0].children[0].children[0].style.left = "200px";
-              // window.document.body.children[0].children[0].children[0].style.top = "412px";
-              // window.document.body.children[0].children[0].style.left = "0px";
-              // sprite.style.left = decompositionDuSprite.perso[0].leftDeImage;
-              // window.document.body.children[0].children[0].children[0].className = "masque"
+              setTimeout(function(){
+                if (alert1 == true) {
+                  alert1 = false;
+                  alert('Vous êtes mort !');
+                }
               document.location.reload();}
               , 1500);
             }
             if (parseFloat(left) >= 3070 && parseFloat(left) <= 3170 && parseFloat(top) == 412) {
               console.log('trou 2');
+              bool = false;
               window.document.body.children[0].children[0].children[0].className = "masque tomber";
               setTimeout(function(){sprite.style.left = mort.perso[0].leftDeImage;}, 100);
               window.document.body.children[0].children[0].children[0].className = "masque tomber mort";
-              setTimeout(function(){alert('Vous êtes mort !');
-              // window.document.body.children[0].children[0].children[0].style.left = "200px";
-              // window.document.body.children[0].children[0].children[0].style.top = "412px";
-              // window.document.body.children[0].children[0].style.left = "0px";
-              // sprite.style.left = decompositionDuSprite.perso[0].leftDeImage;
-              // window.document.body.children[0].children[0].children[0].className = "masque"
+              setTimeout(function(){
+                if (alert2 == true) {
+                  alert2 = false;
+                  alert('Vous êtes mort !');
+                }
               document.location.reload();}
               , 1500)
             }
             if (parseFloat(left) >= 5465 && parseFloat(left) <= 5530 && parseFloat(top) == 269) {
               console.log('trou 3');
+              bool = false;
               window.document.body.children[0].children[0].children[0].className = "masque tomber";
               setTimeout(function(){sprite.style.left = mort.perso[0].leftDeImage;}, 100);
               window.document.body.children[0].children[0].children[0].className = "masque tomber mort";
-              setTimeout(function(){alert('Vous êtes mort !');
-              // window.document.body.children[0].children[0].children[0].style.left = "200px";
-              // window.document.body.children[0].children[0].children[0].style.top = "412px";
-              // window.document.body.children[0].children[0].style.left = "0px";
-              // sprite.style.left = decompositionDuSprite.perso[0].leftDeImage;
-              // window.document.body.children[0].children[0].children[0].className = "masque"
+              setTimeout(function(){
+                if (alert3 == true) {
+                  alert3 = false;
+                  alert('Vous êtes mort !');
+                }
               document.location.reload();}
               , 1500)
             }
@@ -2275,11 +2273,16 @@ window.onload = function(){
         if (parseFloat(top) >= 90 && parseFloat(left) >= 2465 && parseFloat(left) <= 2525) {
           console.log('descente trou 1');
           var top = 484;
+          bool = false;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
           window.document.body.children[0].children[0].children[0].className = "masque tomber";
           setTimeout(function(){sprite.style.left = mort.perso[0].leftDeImage;}, 100);
           window.document.body.children[0].children[0].children[0].className = "masque tomber mort";
-          setTimeout(function(){alert('Vous êtes mort !');
+          setTimeout(function(){
+            if (alert8 == true) {
+              alert8 = false;
+              alert('Vous êtes mort !');
+            }
           document.location.reload();}
           , 1500);
         }
@@ -2299,11 +2302,16 @@ window.onload = function(){
         if (parseFloat(top) >= 179 && parseFloat(left) >= 3070 && parseFloat(left) < 3170) {
           console.log('descente trou 2');
           var top = 484;
+          bool = false;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
           window.document.body.children[0].children[0].children[0].className = "masque tomber";
           setTimeout(function(){sprite.style.left = mort.perso[0].leftDeImage;}, 100);
           window.document.body.children[0].children[0].children[0].className = "masque tomber mort";
-          setTimeout(function(){alert('Vous êtes mort !');
+          setTimeout(function(){
+            if (alert9 == true) {
+              alert9 = false;
+              alert('Vous êtes mort !');
+            }
           document.location.reload();}
           , 1500);
         }
@@ -2395,11 +2403,16 @@ window.onload = function(){
         if (parseFloat(top) >= 90 && parseFloat(left) >= 5465 && parseFloat(left) < 5520) {
           console.log('descente trou 3');
           var top = 484;
+          bool = false;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
           window.document.body.children[0].children[0].children[0].className = "masque tomber";
           setTimeout(function(){sprite.style.left = mort.perso[0].leftDeImage;}, 100);
           window.document.body.children[0].children[0].children[0].className = "masque tomber mort";
-          setTimeout(function(){alert('Vous êtes mort !');
+          setTimeout(function(){
+            if (alert10 == true) {
+              alert10 = false;
+              alert('Vous êtes mort !');
+            }
           document.location.reload();}
           , 1500);
         }
@@ -2912,5 +2925,3 @@ var closeRegle = function () {
   var close1 = window.document.getElementById('texte');
   close1.style.display = "none";
 }
-
-
