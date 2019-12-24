@@ -521,14 +521,23 @@ div p img {
 
 /* bouton fermer regle */
 #close{
-  text-align: center;
   text-decoration: underline;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 #close:hover {
   text-decoration: none;
   cursor: pointer;
-  background-image: url('../image/error.png');
-  background-repeat: no-repeat;
-  background-size: 4%;
+}
+
+#close img {
+  display: none;
+  width: 5%;
+  margin-right: 2%;
+}
+
+#close:hover img{
+  display: block;
 }
