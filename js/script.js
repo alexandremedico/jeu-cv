@@ -929,9 +929,10 @@ window.onload = function(){
             setTimeout(function(){
               if (alert4 == true) {
                 alert4 = false;
-                alert('Vous êtes mort !');
+                window.document.body.children[3].style.display = "block";
+                window.document.body.children[0].children[0].children[0].style.display = "none";
               }
-            document.location.reload();}
+            }
             , 1500);
           }
           if (parseFloat(left) >= 3070 && parseFloat(left) < 3170 && parseFloat(top) == 412) {
@@ -943,9 +944,10 @@ window.onload = function(){
             setTimeout(function(){
               if (alert5 == true) {
                 alert5 = false;
-                alert('Vous êtes mort !');
+                window.document.body.children[3].style.display = "block";
+                window.document.body.children[0].children[0].children[0].style.display = "none";
               }
-            document.location.reload();}
+            }
             , 1500)
           }
           if (parseFloat(left) >= 5465 && parseFloat(left) <= 5530 && parseFloat(top) == 412) {
@@ -957,15 +959,17 @@ window.onload = function(){
             setTimeout(function(){
               if (alert6 == true) {
                 alert6 = false;
-                alert('Vous êtes mort !');
+                window.document.body.children[3].style.display = "block";
+                window.document.body.children[0].children[0].children[0].style.display = "none";
               }
-            document.location.reload();}
+            }
             , 1500)
           }
 
           if (parseFloat(window.document.body.children[0].children[0].children[0].style.left) >= 7290) {
             window.document.body.children[0].children[0].children[0].children[1].style.display = 'none';
-            alert('Vous avez terminé le niveau ! BRAVO !!!! Voici le lien pour mon CV complet ! https://alexandremedico.github.io/cv/');
+            window.document.body.children[4].style.display = "block";
+            // alert('Vous avez terminé le niveau ! BRAVO !!!! Voici le lien pour mon CV complet ! https://alexandremedico.github.io/cv/');
             bool = false;
           }
 
@@ -1991,9 +1995,10 @@ window.onload = function(){
               setTimeout(function(){
                 if (alert7 == true) {
                   alert7 = false;
-                  alert('Vous êtes mort !');
+                  window.document.body.children[3].style.display = "block";
+                  window.document.body.children[0].children[0].children[0].style.display = "none";
                 }
-              document.location.reload();}
+              }
               , 1500);
             }
 
@@ -2033,9 +2038,10 @@ window.onload = function(){
               setTimeout(function(){
                 if (alert1 == true) {
                   alert1 = false;
-                  alert('Vous êtes mort !');
+                  window.document.body.children[3].style.display = "block";
+                  window.document.body.children[0].children[0].children[0].style.display = "none";
                 }
-              document.location.reload();}
+              }
               , 1500);
             }
             if (parseFloat(left) >= 3070 && parseFloat(left) <= 3170 && parseFloat(top) == 412) {
@@ -2047,9 +2053,10 @@ window.onload = function(){
               setTimeout(function(){
                 if (alert2 == true) {
                   alert2 = false;
-                  alert('Vous êtes mort !');
+                  window.document.body.children[3].style.display = "block";
+                  window.document.body.children[0].children[0].children[0].style.display = "none";
                 }
-              document.location.reload();}
+              }
               , 1500)
             }
             if (parseFloat(left) >= 5465 && parseFloat(left) <= 5530 && parseFloat(top) == 269) {
@@ -2061,9 +2068,10 @@ window.onload = function(){
               setTimeout(function(){
                 if (alert3 == true) {
                   alert3 = false;
-                  alert('Vous êtes mort !');
+                  window.document.body.children[3].style.display = "block";
+                  window.document.body.children[0].children[0].children[0].style.display = "none";
                 }
-              document.location.reload();}
+              }
               , 1500)
             }
 
@@ -2119,7 +2127,8 @@ window.onload = function(){
             // fin
             if (parseFloat(window.document.body.children[0].children[0].children[0].style.left) >= 7290) {
               window.document.body.children[0].children[0].children[0].children[0].style.display = 'none';
-              alert('Vous avez terminé le niveau ! BRAVO !!!! Voici le lien pour mon CV complet ! https://alexandremedico.github.io/cv/');
+              window.document.body.children[4].style.display = "block";
+              // alert('Vous avez terminé le niveau ! BRAVO !!!! Voici le lien pour mon CV complet ! https://alexandremedico.github.io/cv/');
               bool = false;
               document.body.children[1].children[4].children[0].style.display ="none";
               document.body.children[1].children[4].children[1].style.display ="block";
@@ -2281,9 +2290,10 @@ window.onload = function(){
           setTimeout(function(){
             if (alert8 == true) {
               alert8 = false;
-              alert('Vous êtes mort !');
+              window.document.body.children[3].style.display = "block";
+              window.document.body.children[0].children[0].children[0].style.display = "none";
             }
-          document.location.reload();}
+          }
           , 1500);
         }
 
@@ -2310,9 +2320,10 @@ window.onload = function(){
           setTimeout(function(){
             if (alert9 == true) {
               alert9 = false;
-              alert('Vous êtes mort !');
+              window.document.body.children[3].style.display = "block";
+              window.document.body.children[0].children[0].children[0].style.display = "none";
             }
-          document.location.reload();}
+          }
           , 1500);
         }
 
@@ -2411,9 +2422,10 @@ window.onload = function(){
           setTimeout(function(){
             if (alert10 == true) {
               alert10 = false;
-              alert('Vous êtes mort !');
+              window.document.body.children[3].style.display = "block";
+              window.document.body.children[0].children[0].children[0].style.display = "none";
             }
-          document.location.reload();}
+          }
           , 1500);
         }
 
@@ -2448,7 +2460,7 @@ window.onload = function(){
         }
 
         if (parseFloat(top) >= 90 && parseFloat(left) >= 7110) {
-          console.log('descente 16');
+          console.log('descente 17');
           var top = 412;
           window.document.body.children[0].children[0].children[0].style.top = top + 'px';
         }
@@ -2905,6 +2917,13 @@ window.onload = function(){
         }
 
 
+        // correction saut dernier block
+        if (parseFloat(left) >= 7060 && parseFloat(left) <= 7100 && parseFloat(top) == 377) {
+          window.document.body.children[0].children[0].children[0].style.top = top + 'px';
+          limiteSaut = '200px';
+        }
+
+
       break;
       }
     }
@@ -2915,13 +2934,23 @@ window.onload = function(){
 // setinterval pour les regles
 var timer = function () {
   window.document.body.children[2].style.display = "block";
-  setTimeout(function() {
+  var intervalRegle = setTimeout(function() {
     window.document.body.children[2].style.display = "none";
+    // if (closeInterval == true) {
+    //   console.log('j\'ai bien clearinterval');
+    //   clearTimeout(intervalRegle);
+    // }
   }, 15000);
 }
 
 var closeRegle = function () {  
   // alert('je suis la');
+  // var closeInterval = true;
   var close1 = window.document.getElementById('texte');
   close1.style.display = "none";
+  // return closeInterval;
+}
+
+var mort = function () {
+  document.location.reload();
 }

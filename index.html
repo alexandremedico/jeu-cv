@@ -198,18 +198,37 @@
           </div> 
      </div>
 
-     <div class="texte" id="texte">
-       <div class="footer1">
-         <p><img id="mario1" src="./image/mario-normal.png" alt=""> <img class="fleche1" src="./image/keyboard-key-pointing-to-right.png" alt="">  Flèche de droite : pour aller a droite.</p>
-         <p><img id="mario2" src="./image/mario-normal.png" alt=""> <img class="fleche1" src="./image/left-arrow-variant-key-on-keyboard.png" alt="">  Flèche de gauche : pour aller a gauche.</p>
-       </div>
+    <div class="texte" id="texte">
+      <div class="footer1">
+        <p><img id="mario1" src="./image/mario-normal.png" alt=""> <img class="fleche1" src="./image/keyboard-key-pointing-to-right.png" alt="">  Flèche de droite : pour aller a droite.</p>
+        <p><img id="mario2" src="./image/mario-normal.png" alt=""> <img class="fleche1" src="./image/left-arrow-variant-key-on-keyboard.png" alt="">  Flèche de gauche : pour aller a gauche.</p>
+      </div>
       <p><img src="./image/saut.png" alt=""><img class="fleche" src="./image/keyboard-key-arrow-up.png" alt="">  Flèche du haut : pour sauter.</p>
       <p><img src="./image/saut.png" alt=""><img class="fleche" src="./image/keyboard-key-arrow-up.png" alt=""><img class="fleche" src="./image/keyboard-key-pointing-to-right.png" alt=""> ou <img class="fleche" src="./image/left-arrow-variant-key-on-keyboard.png" alt="">  Pour le saut, rester appuyer sur la flèche haut et appuyer sur la flèche de droite ou de gauche pour se déplacer.</p>
       <div id="close">
-        <img src="./image/error.png" alt="">
+        <img onclick="closeRegle()" src="./image/error.png" alt="">
         <p><span onclick="closeRegle()">Fermer</span></p>
       </div>
-      
+    </div>
+
+    <div class="mort-texte" id="mort-texte">
+      <h2>Mince vous etes tombé dans un trou.</h2>
+      <p>Appuyez sur ok pour recommencer.</p>
+      <div id="close1">
+        <img onclick="mort()" src="./image/error.png" alt="">
+        <p onclick="mort()">OK</p>
+      </div>
+    </div>
+
+    <div class="fin" id="fin">
+      <h2>Vous avez terminé mon jeu CV. Bravo !</h2>
+      <p>Voici le lien pour mon CV plus complet.</p>
+      <a href="https://alexandremedico.github.io/cv/" target="_blank">Mon CV.</a>
+      <p>Appuyez sur ok pour recommencer.</p>
+      <div id="close2">
+        <img onclick="mort()" src="./image/error.png" alt="">
+        <p onclick="mort()">OK</p>
+      </div>
     </div>
 
     <footer>
