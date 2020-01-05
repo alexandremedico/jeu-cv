@@ -1277,6 +1277,11 @@ window.onload = function(){
             }
           }
 
+          if (parseFloat(left) >= 820 && parseFloat(left) <= 880 && parseFloat(top) <= 270 ||
+          parseFloat(left) >= 700 && parseFloat(left) <= 770 && parseFloat(top) <= 270) {
+            limiteSaut = '100px';
+          }
+
           if ((parseFloat(left) >= 2740) && (parseFloat(left) <= 2855) && parseFloat(top) > 300){
             console.log('colision bloc 3');
             if (parseFloat(window.document.body.children[0].children[0].children[0].style.top) >= 327 && sauter == true) {
