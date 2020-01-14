@@ -693,8 +693,6 @@ window.onload = function(){
           if (parseFloat(left) > 980 && parseFloat(left) <= 1071 && parseFloat(top) > 341) {
             console.log('colisionL');
             bool = false;
-          } else {
-            bool = true;
           }
           
           if (parseFloat(left) > 1340 && parseFloat(left) < 1431 && parseFloat(top) > 306) {
@@ -1990,8 +1988,9 @@ window.onload = function(){
               window.document.body.children[0].children[0].children[0].style.top = top + 'px';
             }
 
-            if (parseFloat(top) <= 127 && parseFloat(left) == 3140 ) {
+            if (parseFloat(top) == 127 && parseFloat(left) == 3140 ) {
               bool = false;
+              console.log(bool);
               var top = 484;
               window.document.body.children[0].children[0].children[0].style.top = top + 'px';
               window.document.body.children[0].children[0].children[0].className = "masque tomber";
@@ -2032,11 +2031,15 @@ window.onload = function(){
               window.document.body.children[0].children[0].children[0].style.top = top + 'px';
             }
 
+            if (parseFloat(top) == 484) {
+              bool=false;
+            }
 
             // trou
             if (parseFloat(left) >= 2465 && parseFloat(left) <= 2525 && parseFloat(top) == 412) {
               console.log('trou');
               bool = false;
+              
               window.document.body.children[0].children[0].children[0].className = "masque tomber";
               setTimeout(function(){sprite.style.left = mort.perso[0].leftDeImage;}, 100);
               window.document.body.children[0].children[0].children[0].className = "masque tomber mort";
