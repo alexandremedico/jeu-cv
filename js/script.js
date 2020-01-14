@@ -2032,7 +2032,7 @@ window.onload = function(){
             }
 
             if (parseFloat(top) == 484) {
-              bool=false;
+              bool = false;
             }
 
             // trou
