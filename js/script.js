@@ -950,7 +950,7 @@ window.onload = function(){
             }
             , 1500)
           }
-          if (parseFloat(left) >= 5465 && parseFloat(left) <= 5530 && parseFloat(top) == 412) {
+          if (parseFloat(left) >= 5465 && parseFloat(left) <= 5520 && parseFloat(top) == 269) {
             console.log('trou 3');
             bool = false;
             window.document.body.children[0].children[0].children[0].className = "masque tomber";
@@ -1990,9 +1990,9 @@ window.onload = function(){
               window.document.body.children[0].children[0].children[0].style.top = top + 'px';
             }
 
-            if (parseFloat(top) == 127 && parseFloat(left) == 3140) {
-              var top = 484;
+            if (parseFloat(top) <= 127 && parseFloat(left) == 3140 ) {
               bool = false;
+              var top = 484;
               window.document.body.children[0].children[0].children[0].style.top = top + 'px';
               window.document.body.children[0].children[0].children[0].className = "masque tomber";
               setTimeout(function(){sprite.style.left = mort.perso[0].leftDeImage;}, 100);
